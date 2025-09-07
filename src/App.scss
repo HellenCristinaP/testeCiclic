@@ -1,0 +1,66 @@
+$fontColorPrimary: #72f951;
+$secondary-color: #f9a51a;
+$tertiary-color: #1e90ff;
+$borderColor: #D9D9D9;
+$blackColor: #141414;
+$whiteColor: #fafafa;
+
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: $whiteColor;
+}
+
+h1, h2, h3 {
+  color: $fontColorPrimary;
+}
+
+header {
+  width: 100%;
+  border-bottom: solid 1px $fontColorPrimary;
+  padding: 15px 0;
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 20px auto;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
+  padding: 24px;
+
+  label {
+    margin-bottom: 8px;
+    color: $blackColor;
+  }
+  input, select {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  input[type="submit"] {
+    background-color: $fontColorPrimary;
+    color: $blackColor;
+    border: 1px solid darken($fontColorPrimary, 35%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: $whiteColor;
+      background-color: darken($fontColorPrimary, 25%);
+    }
+    &:active {
+      background-color: darken($fontColorPrimary, 35%);
+    }
+  }
+}
