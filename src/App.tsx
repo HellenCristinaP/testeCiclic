@@ -1,15 +1,15 @@
 import './App.scss'
-import ciclicLogo from './assets/ciclic-logo.png'
+import Header from './hearder'
 
 function App() {
   return (
     <>
-      <header><img src={ciclicLogo} alt="Ciclic Logo" /></header>
+      <Header />
       <form action="POST">
         <label htmlFor="name">Nome</label>
-        <input type="text" id="name" placeholder="Digite seu nome" autoFocus />
+        <input type="text" id="name" placeholder="Digite seu nome" autoFocus aria-description='Digite seu primeiro nome'/>
         <label htmlFor="monthlyFee">Mensalidade</label>
-        <input type="text" inputMode='numeric' id="monthlyFee" placeholder="100,00 - 9000,00" pattern="[0-9]{3,4},[0-9]{2}" required/>
+        <input type="text" inputMode='numeric' id="monthlyFee" placeholder="100,00 - 9000,00" pattern="[0-9]{3,4},[0-9]{2}" required aria-description='Digite o valor da mensalidade, entre 100,00 e 9000,00'/>
         <label htmlFor="timeInYears">Tempo (anos)</label>
         <select name="timeInYears" id="timeInYears">
           <option value="1">1 ano</option>
